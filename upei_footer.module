@@ -1,0 +1,42 @@
+<?php
+// $Id: upei_footer.module,v 1.0 2013/01/22 17:25:08 krisbulman Exp $
+
+/*
+ * Implementation of hook_theme().
+ */
+function upei_footer_theme() {
+  return array(
+    'upei_footer_footer' => array('arguments' => array(), 'template' => 'upei-footer-footer')
+  );
+}
+
+function upei_footer_block_info() {
+  $blocks['upei_footer'] = array(
+    'info' => t('UPEI footer'), //The name that will appear in the block list.
+    'cache' => DRUPAL_CACHE_PER_ROLE, //Default
+  );
+  return $blocks;
+}
+
+function upei_footer_block_view($delta = '') {
+  // This example is adapted from node.module.
+  $block = array();
+
+  switch ($delta) {
+    case 'upei_footer':
+      $block['subject'] = t('');
+      $block['content'] = theme('upei_footer_footer');
+      return $block;
+    break;
+  }
+
+}
+
+function upei_footer_preprocess_upei_footer_footer(&$variables) {
+  $request = drupal_http_request('http://www.upei.ca/becomeastudent/files/misc/footer.php');
+  $data = $request->data;
+  $request_code = $request->code;
+  if ($request_code === "200") {
+    $variables['external_php'] = $data;
+  }
+}
