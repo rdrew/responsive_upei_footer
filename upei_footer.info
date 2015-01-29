@@ -1,7 +1,7 @@
-; $Id: upei_footer.info,v 1.0 2013/01/22 16:58:08 krisbulman Exp $
-name = UPEI footer
+; $Id: responsive_upei_footer.info,v 1.0 2015/01/27 16:58:08 rdrew Exp $
+name = Responsive UPEI footer
 description = A helper module for including the UPEI footer.
 core = 7.x
-files[] = upei_footer.module
+files[] = responsive_upei_footer.module
 files[] = upei-footer-footer.tpl.php
-stylesheets[all][] = upei_footer.css
+stylesheets[all][] = responsive_upei_footer.css
