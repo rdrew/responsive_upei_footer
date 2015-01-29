@@ -4,3 +4,4 @@ description = A helper module for including the UPEI footer.
 core = 7.x
 files[] = upei_footer.module
 files[] = upei-footer-footer.tpl.php
+stylesheets[all][] = upei_footer.css
