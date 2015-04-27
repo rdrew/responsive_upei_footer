@@ -1,7 +1,6 @@
 UPEI footer exposes a block that includes the footer from a static URL. This module 
 allows the footer to live independant of a theme so it can be exposed on multiple
-site installs and themes. Currently there are no admin options, or included CSS.
-CSS styling is to be handled on the theme layer for now. 
+site installs and themes. Currently there are no admin options but it does pull in a css file for responsivity and some basic styles.
 
 Maintained by Rob Drew.
 
@@ -14,4 +13,4 @@ Install
    (/admin/modules).
 
 3) Go to the blocks page at Structure -> Blocks (admin/structure/block) and set the UPEI Footer block
-   to the footer region. Style accordingly. 
+   to the footer region.  
